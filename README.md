@@ -1,6 +1,6 @@
 # Traits [![Build Status](https://travis-ci.org/fermio/Traits.png?branch=master)](https://travis-ci.org/fermio/Traits)
 
-Library providing more advanced traits for [FermioTraitInjectionBundle][1].
+Library providing more advanced traits for the [FermioTraitInjectionBundle][1].
 
 ## Installation
 
@@ -14,7 +14,7 @@ Add the library in your composer.json:
 }
 ```
 
-### Download the Fermio Traits
+### Download the library
 
 Now tell composer to download the library by running the command:
 
@@ -44,7 +44,7 @@ fermio_trait_injection:
 
 ## Usage
 
-Use the provided by this library instead of the ones provided by the
+Use the provided traits by this library instead of the ones of the
 [FermioTraitInjectionBundle][1]. They are all located in the namespace
 `Fermio\Traits` - the class names are equal to the bundle ones.
 
