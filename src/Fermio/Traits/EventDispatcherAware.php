@@ -17,7 +17,7 @@ use Symfony\Component\EventDispatcher\Event;
 
 trait EventDispatcherAware
 {
-    use Fermio\EventDispatcher;
+    use Fermio\EventDispatcherAware;
 
     /**
      * @see EventDispatcherInterface::dispatch
