@@ -23,7 +23,7 @@ trait DoctrineAware
      */
     public function getManager($name = null)
     {
-        return $this->getManager($name);
+        return $this->doctrine->getManager($name);
     }
 
     /**
