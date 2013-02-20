@@ -13,6 +13,7 @@ namespace Fermio\Traits;
 
 use Fermio\Bundle\TraitInjectionBundle\Traits as Fermio;
 use Symfony\Bundle\FrameworkBundle\HttpKernel;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 
 trait KernelAware
