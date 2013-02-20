@@ -1,7 +1,7 @@
 {
     "name": "fermio/traits",
     "type": "library",
-    "description": "Library providing more advanced traits for FermioTraitInjectionBundle",
+    "description": "Library providing more advanced traits for FermioTraitInjectionBundle.",
     "keywords": ["fermio", "trait", "symfony"],
     "homepage": "https://github.com/fermio/Traits",
     "license": "MIT",
