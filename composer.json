@@ -1,0 +1,34 @@
+{
+    "name": "fermio/traits",
+    "type": "library",
+    "description": "Fermio Traits",
+    "keywords": ["fermio", "trait", "symfony"],
+    "homepage": "https://github.com/fermio/Traits",
+    "license": "MIT",
+    "authors": [{
+        "name": "Pierre Minnieur",
+        "email": "pierre@ferm.io",
+        "homepage": "http://ferm.io/"
+    }],
+    "require": {
+        "php": "~5.4",
+        "fermio/trait-injection-bundle": "~1.0@dev"
+    },
+    "require-dev": {
+        "doctrine/doctrine-bundle": "~1.1",
+        "symfony/form": "~2.1",
+        "symfony/security-bundle": "~2.1",
+        "symfony/swiftmailer-bundle": "~2.1",
+        "symfony/validator": "~2.1"
+    },
+    "autoload": {
+        "psr-0": {
+            "Fermio\\Traits\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
