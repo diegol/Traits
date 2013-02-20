@@ -12,11 +12,15 @@
 namespace Fermio\Traits;
 
 use Fermio\Bundle\TraitInjectionBundle\Traits as Fermio;
+use Symfony\Component\HttpKernel\Log\LoggerInterface;
 
 trait LoggerAware
 {
     use Fermio\LoggerAware;
 
+    /**
+     * @see LoggerInterface::emerg
+     */
     public function logEmergency($message, array $context = [])
     {
         if (null !== $this->logger) {
@@ -24,6 +28,9 @@ trait LoggerAware
         }
     }
 
+    /**
+     * @see LoggerInterface::alert
+     */
     public function logAlert($message, array $context = [])
     {
         if (null !== $this->logger) {
@@ -31,6 +38,9 @@ trait LoggerAware
         }
     }
 
+    /**
+     * @see LoggerInterface::crit
+     */
     public function logCritical($message, array $context = [])
     {
         if (null !== $this->logger) {
@@ -38,6 +48,9 @@ trait LoggerAware
         }
     }
 
+    /**
+     * @see LoggerInterface::err
+     */
     public function logError($message, array $context = [])
     {
         if (null !== $this->logger) {
@@ -45,6 +58,9 @@ trait LoggerAware
         }
     }
 
+    /**
+     * @see LoggerInterface::warn
+     */
     public function logWarning($message, array $context = [])
     {
         if (null !== $this->logger) {
@@ -52,6 +68,9 @@ trait LoggerAware
         }
     }
 
+    /**
+     * @see LoggerInterface::notice
+     */
     public function logNotice($message, array $context = [])
     {
         if (null !== $this->logger) {
@@ -59,6 +78,9 @@ trait LoggerAware
         }
     }
 
+    /**
+     * @see LoggerInterface::info
+     */
     public function logInfo($message, array $context = [])
     {
         if (null !== $this->logger) {
@@ -66,6 +88,9 @@ trait LoggerAware
         }
     }
 
+    /**
+     * @see LoggerInterface::debug
+     */
     public function logDebug($message, array $context = [])
     {
         if (null !== $this->logger) {

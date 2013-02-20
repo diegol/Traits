@@ -12,17 +12,24 @@
 namespace Fermio\Traits;
 
 use Fermio\Bundle\TraitInjectionBundle\Traits as Fermio;
+use Symfony\Bundle\FrameworkBundle\HttpKernel;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 
 trait KernelAware
 {
     use Fermio\KernelAware;
 
+    /**
+     * @see HttpKernel::forward
+     */
     public function forward($controller, array $path = [], array $query = [])
     {
         return $this->kernel->forward($controller, $path, $query);
     }
 
+    /**
+     * @see HttpKernelInterface::handle
+     */
     public function handle(Request $request, $type = HttpKernelInterface::MASTER_REQUEST, $catch = true)
     {
         return $this->kernel->handle($request, $type, $catch);

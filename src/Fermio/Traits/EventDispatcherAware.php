@@ -12,15 +12,18 @@
 namespace Fermio\Traits;
 
 use Fermio\Bundle\TraitInjectionBundle\Traits as Fermio;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\EventDispatcher\Event;
 
 trait EventDispatcherAware
 {
     use Fermio\EventDispatcher;
 
+    /**
+     * @see EventDispatcherInterface::dispatch
+     */
     public function dispatch($eventName, Event $event = null)
     {
         return $this->dispatcher->dispatch($eventName, $event);
     }
-
 }

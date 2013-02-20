@@ -13,21 +13,32 @@ namespace Fermio\Traits;
 
 use Fermio\Bundle\TraitInjectionBundle\Traits as Fermio;
 use Symfony\Component\HttpFoundation\StreamedResponse;
+use Symfony\Component\Templating\StreamingEngineInterface;
+use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
 
 trait TemplatingAware
 {
     use Fermio\TemplatingAware;
 
+    /**
+     * @see EngineInterface::render
+     */
     public function renderView($view, array $parameters = [])
     {
         return $this->templating->render($view, $parameters);
     }
 
+    /**
+     * @see EngineInterface::renderResponse
+     */
     public function render($view, array $parameters = [], Response $response = null)
     {
         return $this->templating->renderResponse($view, $parameters, $response);
     }
 
+    /**
+     * @see StreamingEngineInterface::stream
+     */
     public function stream($view, array $parameters = [], StreamedResponse $response = null)
     {
         $callback = function () use ($view, $parameters) {

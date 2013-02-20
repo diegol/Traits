@@ -17,6 +17,9 @@ trait SwiftmailerAware
 {
     use Fermio\SwiftmailerAware;
 
+    /**
+     * @see \Swift_Mailer::send
+     */
     public function sendMail(\Swift_Mime_Message $message, &$failedRecipients = null)
     {
         return $this->mailer->send($message, $failedRecipients);

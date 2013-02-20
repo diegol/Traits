@@ -11,22 +11,32 @@
 
 namespace Fermio\Traits;
 
+use Doctrine\Common\Persistence\ManagerRegistry;
 use Fermio\Bundle\TraitInjectionBundle\Traits as Fermio;
 
 trait DoctrineAware
 {
     use Fermio\DoctrineAware;
 
+    /**
+     * @see ManagerRegistry::getManager
+     */
     public function getManager($name = null)
     {
         return $this->getManager($name);
     }
 
+    /**
+     * @see ManagerRegistry::getManagerForClass
+     */
     public function getManagerForClass($class)
     {
         return $this->doctrine->getManagerForClass($class);
     }
 
+    /**
+     * @see ManagerRegistry::getRepository
+     */
     public function getRepository($persistentObject, $persistentManagerName = null)
     {
         return $this->doctrine->getRepository($persistentObject, $persistentManagerName);

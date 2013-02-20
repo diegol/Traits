@@ -12,16 +12,23 @@
 namespace Fermio\Traits;
 
 use Fermio\Bundle\TraitInjectionBundle\Traits as Fermio;
+use Symfony\Component\Translation\TranslatorInterface;
 
 trait TranslatorAware
 {
     use Fermio\TranslatorAware;
 
+    /**
+     * @see TranslatorInterface::trans
+     */
     public function translate($id, array $parameters = [], $domain = null, $locale = null)
     {
         return $this->translator->trans($id, $parameters, $domain, $locale);
     }
 
+    /**
+     * @see TranslatorInterface::transChoice
+     */
     public function translateChoice($id, $number, array $parameters = [], $domain = null, $locale = null)
     {
         return $this->translator->transChoice($id, $number, $parameters, $domain, $locale);
