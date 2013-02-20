@@ -12,7 +12,7 @@
 namespace Fermio\Traits;
 
 use Fermio\Bundle\TraitInjectionBundle\Traits as Fermio;
-use Symfony\Component\Security\Core\Authentication\Token\TokenInterface
+use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\SecurityContextInterface;
 
 trait SecurityContextAware
