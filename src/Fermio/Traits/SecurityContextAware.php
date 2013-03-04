@@ -22,7 +22,7 @@ trait SecurityContextAware
     /**
      * @see SecurityContextInterface::isGranted
      */
-    public function isGranted($attributes, $object = null);
+    public function isGranted($attributes, $object = null)
     {
         return $this->securityContext->isGranted($attributes, $object);
     }
