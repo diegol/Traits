@@ -21,7 +21,7 @@ trait TranslatorAware
     /**
      * @see TranslatorInterface::trans
      */
-    public function translate($id, array $parameters = [], $domain = null, $locale = null)
+    public function trans($id, array $parameters = [], $domain = null, $locale = null)
     {
         return $this->translator->trans($id, $parameters, $domain, $locale);
     }
@@ -29,7 +29,7 @@ trait TranslatorAware
     /**
      * @see TranslatorInterface::transChoice
      */
-    public function translateChoice($id, $number, array $parameters = [], $domain = null, $locale = null)
+    public function transChoice($id, $number, array $parameters = [], $domain = null, $locale = null)
     {
         return $this->translator->transChoice($id, $number, $parameters, $domain, $locale);
     }
